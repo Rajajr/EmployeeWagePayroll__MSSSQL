@@ -24,3 +24,10 @@ update EmployeePayroll set Gender='F' Where Empname='Ramya'
 update EmployeePayroll set Gender='M' Where Empname='Sam'
 update EmployeePayroll set Gender='M' Where Empname='Daniel'
 update EmployeePayroll set Gender='M' Where Empname='Sara'
+
+--UC7-
+select Sum(salary)as Total_SUM from EmployeePayroll where Gender='M' group by Gender
+select Avg(salary)as AvgSalary from EmployeePayroll where Gender='M' group by Gender
+select min(salary)as MinSalary from EmployeePayroll where Gender='M' group by Gender
+select max(salary)as MaxSalary from EmployeePayroll where Gender='M' group by Gender
+select count(*)as totalrecord from EmployeePayroll group by Gender
