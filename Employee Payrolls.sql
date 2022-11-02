@@ -13,3 +13,7 @@ insert into EmployeePayroll(Empname,Salary,Salary) values('Sara',25000,'2020-01-
 
 --UC4-Retrive All Records
 select *from EmployeePayroll
+
+--UC5-Retrive Particular Records
+select *from EmployeePayroll WHERE Startdate Between CAST('2020-01-03' as date) And Getdate();
+
