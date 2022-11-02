@@ -17,3 +17,10 @@ select *from EmployeePayroll
 --UC5-Retrive Particular Records
 select *from EmployeePayroll WHERE Startdate Between CAST('2020-01-03' as date) And Getdate();
 
+--UC6-Update Add Gender
+alter table EmployeePayroll add Gender char(1)
+update EmployeePayroll set Gender='M' Where Empname='Raj'
+update EmployeePayroll set Gender='F' Where Empname='Ramya'
+update EmployeePayroll set Gender='M' Where Empname='Sam'
+update EmployeePayroll set Gender='M' Where Empname='Daniel'
+update EmployeePayroll set Gender='M' Where Empname='Sara'
