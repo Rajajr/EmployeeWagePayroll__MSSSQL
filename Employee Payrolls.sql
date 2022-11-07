@@ -25,9 +25,12 @@ update EmployeePayroll set Gender='M' Where Empname='Sam'
 update EmployeePayroll set Gender='M' Where Empname='Daniel'
 update EmployeePayroll set Gender='M' Where Empname='Sara'
 
---UC7-
+--UC7-Ability To Find Sum,Average,Minimum,Maximum and Number Of Male and Female
 select Sum(salary)as Total_SUM from EmployeePayroll where Gender='M' group by Gender
 select Avg(salary)as AvgSalary from EmployeePayroll where Gender='M' group by Gender
 select min(salary)as MinSalary from EmployeePayroll where Gender='M' group by Gender
 select max(salary)as MaxSalary from EmployeePayroll where Gender='M' group by Gender
 select count(*)as totalrecord from EmployeePayroll group by Gender
+
+--UC8-Ability To Extend Employee Payroll Data To Store
+alter table EmployeePayroll add Department varchar(200),Address varchar (200),Phone_Number bigint
